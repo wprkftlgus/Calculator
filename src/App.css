@@ -1,0 +1,52 @@
+.calcontain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(46, 51, 47);
+}
+.inputBar{
+  width: auto;
+  max-width: 450px;
+  height: 65px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  border: 2px solid #4b89dc;
+  text-align: right;
+  padding-right: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #61dafb;
+  gap: 10px;
+}
+.operButton{
+  color: white;
+  background-color: rgb(21, 115, 202);
+  border-radius: 35px;
+  border:none;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px lightgray;
+  &:active {
+    box-shadow: none;
+  }
+}
+.button{
+  font-size: 30px;
+  color: black;
+  border-radius: 35px;
+  border:none;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px lightgray;
+  &:active {
+    box-shadow: none;
+  }
+}
+
+
+
