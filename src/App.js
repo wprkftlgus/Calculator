@@ -4,11 +4,17 @@ import {useState} from 'react';
 
 function App() {
   const [calc, setCalc] = useState('');
+  const [operCheck, setOperCheck] = useState(true);
+
   const getNum = (e) => {
     setCalc((prev) =>prev + e.target.value)
+    setOperCheck(true);
   }
   const getOper = (e) => {
-    setCalc((prev) =>prev + e.target.value)
+    if(operCheck){
+    setCalc((prev) =>prev + e.target.value);
+    setOperCheck(false);
+    }
   }
   const allClear = () => {
     setCalc((prev)=>'');
@@ -42,7 +48,9 @@ function App() {
   };
 
   return (
-    <div>
+    <body>
+    <div className='back'>
+    <div className='title'>CALCULATOR</div>
       <div class='calcontain'>
     <input class='inputBar'readOnly value={calc} />
     <div class='grid'>
@@ -63,10 +71,11 @@ function App() {
     <button class='button' value={3} onClick={getNum}>3</button>
     <button class='operButton' value={'+'} onClick={getOper}>+</button>
     <button class='button' value={0} onClick={getNum}>0</button>
-    <button class='button' value='.'>.</button>
+    <button class='button' value={'.'}>.</button>
     <button class='operButton' value={'='} onClick={getResult}>=</button>
     </div></div>
     </div>
+    </body>
   );
 }
 

@@ -1,13 +1,30 @@
+body{
+  background-color: wheat;
+}
 .calcontain{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 400px;
-  background-color: rgb(46, 51, 47);
+  height: 450px;
+  width: 450px;
+  background-color:rgb(238, 86, 69);
+  border-radius: 8%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border: 5px solid cornflowerblue;
+}
+.title{
+  font-weight: 600;
+  margin-top: 5rem;
+  text-align: center;
+  color:rgb(4, 97, 97);
+  font-size: 3rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 1rem;
 }
 .inputBar{
+  font-family: cursive;
   width: auto;
   max-width: 450px;
   height: 65px;
@@ -17,6 +34,7 @@
   border: 2px solid #4b89dc;
   text-align: right;
   padding-right: 20px;
+  background-color: beige;
 }
 .grid {
   display: grid;
@@ -26,7 +44,7 @@
 }
 .operButton{
   color: white;
-  background-color: rgb(21, 115, 202);
+  background-color: palevioletred;
   border-radius: 35px;
   border:none;
   font-size: 30px;
@@ -37,6 +55,8 @@
   }
 }
 .button{
+
+  background-color: rgb(247, 194, 247);
   font-size: 30px;
   color: black;
   border-radius: 35px;
