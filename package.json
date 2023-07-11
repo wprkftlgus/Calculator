@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://startling-frangollo-26e228.netlify.app",
+  "homepage": "https://sean-calculator.netlify.app",
   "eslintConfig": {
     "extends": [
       "react-app",
