@@ -70,7 +70,7 @@ function App() {
     <button class='button' value={3} onClick={getNum}>3</button>
     <button class='operButton' value={'+'} onClick={getOper}>+</button>
     <button class='button' value={0} onClick={getNum}>0</button>
-    <button class='button' value={'.'}>.</button>
+    <button class='button' value={"."} onClick={getOper}>.</button>
     <button class='operButton' value={'='} onClick={getResult}>=</button>
     </div></div>
     </div>
