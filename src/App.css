@@ -67,6 +67,28 @@ body{
     box-shadow: none;
   }
 }
-
+@media (max-width: 510px) {
+  .title{
+   width: 100%;
+   font-size: 30px; 
+  }
+  .calcontain{
+    display: flex;
+    width: 60%;
+    font-size: 150%;
+   
+  }
+  .inputBar{
+    font-size: 70%;
+    border: 0 auto;
+  }
+  .grid{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .button{
+    font-size: 100%;
+  }
+}
 
 
