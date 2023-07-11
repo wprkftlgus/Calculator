@@ -70,7 +70,7 @@ body{
 @media (max-width: 510px) {
   .title{
    width: 100%;
-   font-size: 30px; 
+   font-size: 40px; 
   }
   .calcontain{
     display: flex;
@@ -83,8 +83,8 @@ body{
     border: 0 auto;
   }
   .grid{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .button{
     font-size: 100%;
