@@ -23,6 +23,7 @@ function App() {
     let str = (calc).slice(0, -1);
     setCalc((prev) => str);
 
+    
   }
   const getResult = () => {
     
