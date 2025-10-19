@@ -5,7 +5,7 @@ import {useState} from 'react';
 function App() {
   const [calc, setCalc] = useState('');
   const [operCheck, setOperCheck] = useState(true);
-
+  const [result, setResult] = useState('');
   const getNum = (e) => {
     setCalc((prev) =>prev + e.target.value)
     setOperCheck(true);
@@ -18,16 +18,20 @@ function App() {
   }
   const allClear = () => {
     setCalc((prev)=>'');
+    setResult((prev)=>'');
   }
   const delCalc = () => {
     let str = (calc).slice(0, -1);
     setCalc((prev) => str);
   }
   const getResult = () => {
-    
+    if (/[\+\-\×\÷\*/%]$/.test(calc.trim())) {
+  return false;
+  }   
     let replace_str = calc.replace(/×/gi, "*").replace(/÷/gi, "/");
 
-    if (isNaN(eval(replace_str))) {
+  try{
+      if (isNaN(eval(replace_str))) {
       setCalc("");
     } else if (eval(replace_str) == Infinity) {
       alert("You can't devide as zero");
@@ -42,20 +46,35 @@ function App() {
       setCalc("");
       return false;
     }
-      setCalc(() => eval(replace_str));
+      setResult(() => eval(replace_str));
     
-  };
+  } catch(err){
+    setCalc("");
+    setResult("");
+  }
+  }
 
   return (
     <body>
     <div className='back'>
-    <div className='title'>CALCULATOR</div>
-      <div class='calcontain'>
+    <div className='top-titles'>
+    <div className='title1'>Sihyeon's </div>
+    <div className='title2'>Calculator</div>
+    </div>
+    <div class='calcontain'>
+    <div className='holder-top'>
+    <div className='network'></div>
+    <div className='wifi'></div>
+    <div className='battery'></div>
+    </div>
+    <div className='holder-inputAndResult'>
     <input class='inputBar'readOnly value={calc} />
+    <input class='resultBar'readOnly value={result} />
+    </div>
     <div class='grid'>
-    <button class='button' onClick = {allClear}>AC</button>
-    <button class='button' onClick = {delCalc}>DEL</button>
-    <button class='operButton' value={'%'} onClick={getOper}>%</button>
+    <button class='button-top' onClick = {allClear}>AC</button>
+    <button class='button-top' onClick = {delCalc}>DEL</button>
+    <button class='button-top' value={'%'} onClick={getOper}>%</button>
     <button class='operButton' value={'÷'} onClick={getOper}>/</button>
     <button class='button' value={7} onClick={getNum}>7</button>
     <button class='button' value={8} onClick={getNum}>8</button>
@@ -72,7 +91,11 @@ function App() {
     <button class='button' value={0} onClick={getNum}>0</button>
     <button class='button' value={"."} onClick={getOper}>.</button>
     <button class='operButton' value={'='} onClick={getResult}>=</button>
-    </div></div>
+    </div>
+    <div className='holder-white'>
+    <div className='white'></div>
+    </div>
+    </div>
     </div>
     </body>
   );
