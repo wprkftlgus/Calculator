@@ -1,7 +1,6 @@
 
 # 🧮 React Calculator App
 <img width="938" height="948" alt="캡처" src="https://github.com/user-attachments/assets/fa1dd713-344c-448a-b9be-58a1fbd83419" />
-
 ### A simple and modern calculator built with **React**.  
 ### It supports basic arithmetic operations such as addition, subtraction, multiplication, and division, with input validation and a clean UI design.
 
@@ -30,7 +29,7 @@
 ### Functional buttons (AC, DEL, =)
 
 # ⚙️ Installation
-1. git clone https://github.com/wprkftlgus/Calculator.git
-2. cd react-calculator
-3. npm install
-4. npm start
+### 1. git clone https://github.com/wprkftlgus/Calculator.git
+### 2. cd react-calculator
+### 3. npm install
+### 4. npm start
